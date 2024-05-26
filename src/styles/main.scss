@@ -1,0 +1,11 @@
+// import dark theme
+@use "element-plus/theme-chalk/src/dark/css-vars.scss" as *;
+
+// If you want to use ElMessage, import it.
+@use "element-plus/theme-chalk/src/message.scss";
+
+@use "reset.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -1,0 +1,28 @@
+// only scss variables
+
+$--colors: (
+  // "primary": ("base": #589ef8,
+  // ),
+);
+
+$--bg-color: (
+  'page': rgb(16 24 35),
+  '': rgb(16 24 35),
+  'overlay': rgb(11 33 67),
+);
+
+$--border-color: (
+  '':rgb(61 96 136),
+  'light':rgb(61 96 136),
+  'hover':rgb(53 187 255 / 0.6)
+);
+
+$--fill-color: (
+  'light':rgb(23, 78, 122),
+);
+
+@forward "element-plus/theme-chalk/src/dark/var.scss" with ($colors: $--colors,
+  $bg-color: $--bg-color,
+  $border-color: $--border-color,
+  $fill-color: $--fill-color,
+);

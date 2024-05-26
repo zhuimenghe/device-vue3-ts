@@ -1,0 +1,47 @@
+///element样式覆盖
+/// 可以用控制台看组件用了哪个变量来改  
+
+$--colors: (
+  "primary": ("base": rgb(53 187 255),
+  ),
+  "success": ("base": rgb(6 241 154),
+  ),
+  "warning": ("base": rgb(254 147 31),
+  ),
+  "danger": ("base": rgb(234 38 40),
+  ),
+  "error": ("base": rgb(234 38 40),
+  ),
+  "info": ("base": #909399),
+);
+
+$--font-size: (
+  // 'extra-large': 20px,
+  // 'large': 18px,
+  // 'medium': 16px,
+  'base': 16px,
+  // 'small': 13px,
+  // 'extra-small': 12px,
+);
+
+// we can add this to custom namespace, default is 'el'
+@forward "element-plus/theme-chalk/src/mixins/config.scss" with ($namespace: "el"
+);
+
+// You should use them in scss, because we calculate it by sass.
+// comment next lines to use default color
+@forward "element-plus/theme-chalk/src/common/var.scss" with ( // do not use same name, it will override.
+  $colors: $--colors,
+);
+
+// if you want to import all
+// @use "element-plus/theme-chalk/src/index.scss" as *;
+
+// You can comment it to hide debug info.
+// @debug $--colors;
+
+// custom dark variables
+@use "./dark.scss";
+
+//其他样式覆盖
+@use "./reset.scss";
